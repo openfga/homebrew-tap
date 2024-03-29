@@ -26,7 +26,7 @@ class Fga < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/openfga/cli/releases/download/v0.3.0/fga_0.3.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fa7168b5b0d16312404e4a6b841ce27b8fc253653a141d041659741d7187852d`"
+      sha256 "fa7168b5b0d16312404e4a6b841ce27b8fc253653a141d041659741d7187852d"
 
       def install
         bin.install "fga"
