@@ -5,7 +5,7 @@
 class Openfga < Formula
   desc "A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar."
   homepage "https://openfga.dev/"
-  version "1.6.0"
+  version "1.6.1"
   license "Apache-2.0"
 
   depends_on "git"
@@ -13,8 +13,8 @@ class Openfga < Formula
 
   on_macos do
     on_intel do
-      url "https://github.com/openfga/openfga/releases/download/v1.6.0/openfga_1.6.0_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8513b20e49bfce793dc67eccc5e6295d5857dc05fecda323c5bf5341b7d95bc1"
+      url "https://github.com/openfga/openfga/releases/download/v1.6.1/openfga_1.6.1_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c926a9cf4b026194b549378bed8992d6249ff976705e32215e76b4aca8fccdb1"
 
       def install
         bin.install "openfga"
@@ -24,8 +24,8 @@ class Openfga < Formula
       end
     end
     on_arm do
-      url "https://github.com/openfga/openfga/releases/download/v1.6.0/openfga_1.6.0_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0cb5e3fee4ff3d76827e67efa3f2924a4cb895e4dd44e081cc9ec4b0d956abe7"
+      url "https://github.com/openfga/openfga/releases/download/v1.6.1/openfga_1.6.1_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "1aa40890fa79a278a142367877590c4379dac0c9688641ef03978de62fd394b3"
 
       def install
         bin.install "openfga"
@@ -39,8 +39,8 @@ class Openfga < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/openfga/openfga/releases/download/v1.6.0/openfga_1.6.0_linux_amd64.tar.gz", using: CurlDownloadStrategy
-        sha256 "95f325734370e806aa57034b0a0b388b82a2bec3a624d23fec09ea6960570f07"
+        url "https://github.com/openfga/openfga/releases/download/v1.6.1/openfga_1.6.1_linux_amd64.tar.gz", using: CurlDownloadStrategy
+        sha256 "c775ed78321334d7a14cdf53830b9ae18391f751fb180f0e3ed8194d82f272c8"
 
         def install
           bin.install "openfga"
@@ -52,8 +52,8 @@ class Openfga < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/openfga/openfga/releases/download/v1.6.0/openfga_1.6.0_linux_arm64.tar.gz", using: CurlDownloadStrategy
-        sha256 "fd7fc5671d21d32adce447d2932a348b1f9d45e70364f15fbf0b86583581f140"
+        url "https://github.com/openfga/openfga/releases/download/v1.6.1/openfga_1.6.1_linux_arm64.tar.gz", using: CurlDownloadStrategy
+        sha256 "e45981de95dde488ac4e7a1637e39533363aa6da2c01d8f34d6f8dc4997c9d24"
 
         def install
           bin.install "openfga"
