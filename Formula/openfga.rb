@@ -5,7 +5,7 @@
 class Openfga < Formula
   desc "A high performance and flexible authorization/permission engine built for developers and inspired by Google Zanzibar."
   homepage "https://openfga.dev/"
-  version "1.9.2"
+  version "1.9.3"
   license "Apache-2.0"
 
   depends_on "git"
@@ -13,8 +13,8 @@ class Openfga < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openfga/openfga/releases/download/v1.9.2/openfga_1.9.2_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "440671d0000e5360634319a92f57357399218e1aefce679e37e825ca03f2cb51"
+      url "https://github.com/openfga/openfga/releases/download/v1.9.3/openfga_1.9.3_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8800379a3be1dfc391fa05ab7f85990b79782f8e2a4b2a30a5d76aabb9d06bf4"
 
       def install
         bin.install "openfga"
@@ -24,8 +24,8 @@ class Openfga < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openfga/openfga/releases/download/v1.9.2/openfga_1.9.2_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "781ab39f48b9674234eaa01f5ef75e01f294d91bd91d9a901bc6586b4f9db1ad"
+      url "https://github.com/openfga/openfga/releases/download/v1.9.3/openfga_1.9.3_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "da6b5fb6ebc0cc0156a4133bbf7133eacc1332c8de8540fdb3416f238720ec5e"
 
       def install
         bin.install "openfga"
@@ -38,8 +38,8 @@ class Openfga < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/openfga/openfga/releases/download/v1.9.2/openfga_1.9.2_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "3add5dda07bb7bce28aecb66bf3d782a5563e1ebc251ee394909e0c3dc6abedd"
+      url "https://github.com/openfga/openfga/releases/download/v1.9.3/openfga_1.9.3_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "95219b121f4bce8f2b88c18be5fd0915ce004ca80d07d58d33032cb7d5b22d46"
       def install
         bin.install "openfga"
         bash_completion.install "completions/openfga.bash" => "goreleaser"
@@ -48,8 +48,8 @@ class Openfga < Formula
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/openfga/openfga/releases/download/v1.9.2/openfga_1.9.2_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "628d1efc6588f679a3c17bfe1942cde31c495d3830dec0e709dad84b1a620f9c"
+      url "https://github.com/openfga/openfga/releases/download/v1.9.3/openfga_1.9.3_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cafce92753731d7ac3f04e0f4b7cc7ce87d643b431ebb7398f43b09727b6a96e"
       def install
         bin.install "openfga"
         bash_completion.install "completions/openfga.bash" => "goreleaser"
