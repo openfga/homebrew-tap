@@ -5,7 +5,7 @@
 class Fga < Formula
   desc "A cross-platform CLI to interact with an OpenFGA server."
   homepage "https://openfga.dev/"
-  version "0.7.4"
+  version "0.7.5"
   license "Apache-2.0"
 
   depends_on "git"
@@ -13,8 +13,8 @@ class Fga < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/openfga/cli/releases/download/v0.7.4/fga_0.7.4_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5129755be640283480b551659e5c793c2d5cdc4c172ae381440e769f547cf2b2"
+      url "https://github.com/openfga/cli/releases/download/v0.7.5/fga_0.7.5_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5667c5698f797ee9e9a509823628c188171ff1d733130df1604edc24436db3d3"
 
       def install
         bin.install "fga"
@@ -25,8 +25,8 @@ class Fga < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/openfga/cli/releases/download/v0.7.4/fga_0.7.4_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "6c2540acf56b436ad718f2d54f2d36a00c1e2f4195f450ae9e9f504d4dedc373"
+      url "https://github.com/openfga/cli/releases/download/v0.7.5/fga_0.7.5_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "c94f8624146c40ccb63668bf7c035d121f9b1ff724f99dd0b5572a5e40cf1b06"
 
       def install
         bin.install "fga"
@@ -39,9 +39,9 @@ class Fga < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/openfga/cli/releases/download/v0.7.4/fga_0.7.4_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "05e95247c99e5361fcb837dd6c41cfad2c4e9582d2ba90e571088ef20c87a70e"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/openfga/cli/releases/download/v0.7.5/fga_0.7.5_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "cb6c58252aa400d6a7a632f727679c8f270d66de2eb5d1cfa2bc495b53cc96a4"
       def install
         bin.install "fga"
         bash_completion.install "completions/fga.bash" => "fga"
@@ -50,9 +50,9 @@ class Fga < Formula
         man1.install "manpages/fga.1.gz"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/openfga/cli/releases/download/v0.7.4/fga_0.7.4_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a181c7290b1876174b1f63251c7dd8e3ec9a0a95292189498ec56517bb9b9003"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/openfga/cli/releases/download/v0.7.5/fga_0.7.5_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "eb410a0b1e17e132be85de9187e15def76078c2f2f0459a22accaaf98d509d49"
       def install
         bin.install "fga"
         bash_completion.install "completions/fga.bash" => "fga"
